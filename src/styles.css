@@ -6,3 +6,12 @@
 .paragraph {
     color: red;
 }
+
+.ItemListContainer h1{
+    color: #E6A8D2;
+}
+
+.ItemListContainer h2{
+    color: #6064B8;
+    font-style: italic;
+}

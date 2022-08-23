@@ -6,6 +6,8 @@ import Header from './components/Header/header';
 import CardComponent from "./components/CardComponent/CardComponent";
 import { Card } from "@mui/material";
 import NavBar from "./components/NavBar/NavBar";
+import CartWidget from "./components/CartWidget/CartWidget"
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 
 class App extends React.Component {
   render () {
@@ -18,6 +20,14 @@ class App extends React.Component {
         <NavBar>
 
         </NavBar>
+
+        <ItemListContainer title='Soy un producto nuevo'
+      subtitle='¡Soy un producto que está en oferta!'>
+      </ItemListContainer>
+      
+      <ItemListContainer title='Soy un producto viejo'
+      subtitle='¡Soy un producto que se está por agotar!'>
+      </ItemListContainer>
       </div>
     )
   }
