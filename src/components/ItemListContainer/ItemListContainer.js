@@ -1,6 +1,4 @@
 import React from "react";
-import StorefrontIcon from '@mui/icons-material/Storefront';
-import PaidIcon from '@mui/icons-material/Paid';
 
 const ItemListContainer = (props) => {
     return (

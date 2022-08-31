@@ -3,31 +3,37 @@ import "./styles.css";
 
 // Componentes
 import Header from './components/Header/header';
-import CardComponent from "./components/CardComponent/CardComponent";
 import { Card } from "@mui/material";
 import NavBar from "./components/NavBar/NavBar";
-import CartWidget from "./components/CartWidget/CartWidget"
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemCount from "./components/ItemCount/ItemCount";
+import Footer from "./components/Footer/Footer";
+import Info from "./components/Item/Item";
+import Item from "./components/ItemList/ItemList";
 
 class App extends React.Component {
   render () {
     return (
       <div>
         <Header>
-
         </Header>
-
         <NavBar>
-
         </NavBar>
 
-        <ItemListContainer title='Soy un producto nuevo'
-      subtitle='¡Soy un producto que está en oferta!'>
-      </ItemListContainer>
-      
-      <ItemListContainer title='Soy un producto viejo'
-      subtitle='¡Soy un producto que se está por agotar!'>
-      </ItemListContainer>
+        <div className="ItemContainer">
+      {Item.map((e)=>{
+        return(
+          <Info name={e.name} number={e.number} img={e.img}/>
+        );
+      })}
+  
+        </div>
+        
+<ItemCount>        
+  </ItemCount>
+
+      <Footer>
+      </Footer>
       </div>
     )
   }
@@ -35,6 +41,14 @@ class App extends React.Component {
 
 export default App;
 
+
+/*     /*<ItemListContainer title='Soy un producto nuevo'
+      subtitle='¡Soy un producto que está en oferta!'>
+      </ItemListContainer>
+      
+      <ItemListContainer title='Soy un producto viejo'
+      subtitle='¡Soy un producto que se está por agotar!'>
+      </ItemListContainer>*/
 /* Ejemplos de la clase:
 
 class App extends React.Component {
