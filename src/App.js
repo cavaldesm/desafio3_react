@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles.css";
+import "bulma/css/bulma.min.css";
 
 // Componentes
 import Header from './components/Header/header';
@@ -10,6 +11,7 @@ import ItemCount from "./components/ItemCount/ItemCount";
 import Footer from "./components/Footer/Footer";
 import Info from "./components/Item/Item";
 import Item from "./components/ItemList/ItemList";
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 
 class App extends React.Component {
   render () {
@@ -28,12 +30,13 @@ class App extends React.Component {
       })}
   
         </div>
-        
-<ItemCount>        
-  </ItemCount>
 
       <Footer>
       </Footer>
+
+      <ItemDetailContainer>
+
+      </ItemDetailContainer>
       </div>
     )
   }
