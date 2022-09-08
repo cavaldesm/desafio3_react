@@ -1,6 +1,12 @@
 import React from "react";
 import "./styles.css";
 import "bulma/css/bulma.min.css";
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // Componentes
 import Header from './components/Header/header';
@@ -12,14 +18,30 @@ import Footer from "./components/Footer/Footer";
 import Info from "./components/Item/Item";
 import Item from "./components/ItemList/ItemList";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import { containerClasses } from "@mui/system";
 
-class App extends React.Component {
-  render () {
+function App () {
     return (
-      <div>
+      <div className="App">
+
+        <BrowserRouter>
+        <nav>
+          <Link to="/">Inicio</Link>
+          <Link to="/category:/id">Productos</Link>
+          <Link to="/item/:id">Detalle</Link>
+        </nav>
+        <Routes>
+          <Route path='/' element={<ItemListContainer/>}/>
+          <Route path='/category/:id' element={<ItemListContainer/>}/>
+          <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+        </Routes>
+          </BrowserRouter>
+
         <Header>
         </Header>
+
         <NavBar>
+
         </NavBar>
 
         <div className="ItemContainer">
@@ -33,14 +55,9 @@ class App extends React.Component {
 
       <Footer>
       </Footer>
-
-      <ItemDetailContainer>
-
-      </ItemDetailContainer>
       </div>
     )
   }
-}
 
 export default App;
 

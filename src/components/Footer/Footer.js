@@ -11,11 +11,6 @@ Heading,
 const Footer = () => {
 return (
 	<Box>
-	<h1 style={{ color: "#6064B8",
-				textAlign: "center",
-				marginTop: "-50px" }}>
-		Crochet Bunker
-	</h1>
 	<Container>
 		<Row>
 		<Column>

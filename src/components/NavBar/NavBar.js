@@ -4,6 +4,7 @@ import StorefrontIcon from '@mui/icons-material/Storefront';
 import PaidIcon from '@mui/icons-material/Paid';
 import CartWidget from "../CartWidget/CartWidget";
 import ItemListContainer from "../ItemListContainer/ItemListContainer";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
     return (
@@ -17,6 +18,7 @@ const NavBar = () => {
                 <StorefrontIcon>
 </StorefrontIcon>
 <PaidIcon>
+
 </PaidIcon>
 <CartWidget>
 </CartWidget>
